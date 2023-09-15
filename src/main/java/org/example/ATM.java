@@ -46,6 +46,9 @@ public class ATM implements ATMInterface {
         return sum;
     }
     public void system() {
+            Registion registion = new Registion();
+            registion.menu();
+
             cards.add(card1);
             cards.add(card2);
             bankAccounts.add(user1);
