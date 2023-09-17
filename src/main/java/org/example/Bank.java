@@ -4,12 +4,14 @@ public class Bank implements BankInterface {
     private String userName;
     private int accountId;
     private double accountBalance;
+    private long numberPhone;
     private Card userCard;
-    public Bank(String userName, int accountId, double accountBalance, Card userCard) {
+    public Bank(String userName, int accountId, double accountBalance, long numberPhone , Card userCard) {
         this.userName = userName;
         this.accountId = accountId;
         this.accountBalance = accountBalance;
         this.userCard = userCard;
+        this.numberPhone = numberPhone;
     }
 
     @Override

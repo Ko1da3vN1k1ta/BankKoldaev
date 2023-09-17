@@ -8,19 +8,19 @@ public class ATM implements ATMInterface {
     private Bank currentUser;
     private int remainingPinAttempts;
     private boolean next = false;
-    public ArrayList<Card> cards = new ArrayList<Card>();
-    public ArrayList<Bank> bankAccounts = new ArrayList<>();
+    static public ArrayList<Card> cards = new ArrayList<Card>();
+    static public ArrayList<Bank> bankAccounts = new ArrayList<>();
     public Card card1 = new Card(478149,2718,113);
     public Card card2 = new Card(623712,4437,532);
     public Card card3 = new Card(139514,9302,222);
     public Card card4 = new Card(131414,1001,414);
     public Card card5 = new Card(757832,2222,659);
 
-    public Bank user1 = new Bank("Nikita",1,100, card1);
-    public Bank user2 = new Bank("Vladimir",2,1000000000, card2);
-    public Bank user3 = new Bank("Ilya",3,650, card3);
-    public Bank user4 = new Bank("Spetan",4,1570938, card4);
-    public Bank user5 = new Bank("Andrei",5,99999999, card5);
+    public Bank user1 = new Bank("Nikita",1,100, 79542335 ,card1);
+    public Bank user2 = new Bank("Vladimir",2,1000000000, 745245352,card2);
+    public Bank user3 = new Bank("Ilya",3,650, 745234246,card3);
+    public Bank user4 = new Bank("Spetan",4,1570938, 79533481,card4);
+    public Bank user5 = new Bank("Andrei",5,99999999, 734241414,card5);
     CheckingExceptions cti = new CheckingExceptions();
     private int checkMethod() {
         System.out.println("Для просмотра баланса введите - 1");
@@ -29,6 +29,7 @@ public class ATM implements ATMInterface {
         System.out.println("Для выхода с терминала введите - 4");
         int method = cti.nextInt();
         return method;
+
     }
     private int checkPinCode() {
         System.out.println("Введите пин-код:");
